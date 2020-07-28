@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/shopping1.css" />
+		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/shopping1.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 引入选项卡插件 -->
+		<script src="lib/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="./lib/layui/css/layui.css" />
+	</head>
+	<body>
+		<div class="box">
+			<!-- 第一层 -->
+			<div class="floor1">
+				<div class="container clearfix">
+					<div class="left"><img src="img/shopp1/logo.png" style="width: 100%;height: 100%;"></div>
+					<div class="center">结算中心</div>
+					<div class="right">
+						<li><a href="index.html">返回首页</a></li>
+						<li><a href="usercenter.html"><span></span></a></li>
+						<li><a href="usercenter.html">我的订单</a></li>
+						<li><a href="index.html">退出登录</a></li>
+					</div>
+				</div>
+			</div>
+			<!-- 第二层 -->
+			<div class="floor2">
+				<div class="container">
+					<div class="shopp">
+						<div class="address header">
+							<span>收货地址</span>
+							<button>新增地址</button>
+							<ul>
+								<li>
+									<div class="shouhuoren">收货人</div>
+									<div class="lianxifangshi">联系方式</div>
+									<div class="dizhi">地址</div>
+									<!-- <div class="caozuo">操作</div> -->
+								</li>
+							</ul>
+							<ul style="display: none;">
+								<li>
+									<div class="shouhuoren">收货人</div>
+									<div class="lianxifangshi">联系方式</div>
+									<div class="dizhi">地址</div>
+									<!-- <div class="caozuo">操作</div> -->
+								</li>
+							</ul>
+							<div class="adress_alert">
+								<h2>添加地址</h2>
+								<form action="" name='address'>
+									<div>
+										<span>*</span>
+										<p>收 货 人 : </p>
+										<input type="text">
+									</div>
+									<div>
+										<span>*</span>
+										<p>联系方式 :</p>
+										<input type="text">
+									</div>
+									<div>
+										<span>*</span>
+										<p>收货地址 :</p>
+										<input type="text">
+									</div>
+								</form>
+								<button class="btn-cale" type="button">取消</button>
+								<button class="btn-save" type="button">保存</button>
+							</div>
+						</div>
+						<div class="one header">支付方式
+							<div class="zhifu">在线支付</div>
+						</div>
+						<div class="two header clearfix">送货清单 <span><a href="shoppingcart.html">返回修改购物车</a></span>
+							<div class="peisong clearfix">
+								<div class="left">配送方式<br><span>快递配送</span></div>
+								<!-- 用来做为 商品的兄元素 -->
+								<table class="tab"></table>
+								<!-- 只用来复制 -->
+								<div class="rightbox" style="display: none;">
+									<div class="right">
+										<div class="tupian">
+											<img src="img/productdetail/detail_big04.jpg" alt="">
+										</div>
+										<div class="wenzi">
+											<span></span>
+											<a href="javaScript:void(0);">单价:</a>
+											<p style="color: red;"></p>
+											<a href="javaScript:void(0);">数量:</a>
+											<p class="yidong"></p><br>
+											<span style="font-size: 12px; color: #757575;"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="three header">发票信息
+							<div class="xiugai">
+								<li><a href="">电子发票</a></li>
+								<li><a href="">个人</a></li>
+								<li><a href="">商品详情</a></li>
+								<li><a href="">修改></a></li>
+							</div>
+							<div class="icon1 clearfix"><img src="img/shopp1/3.png" style="width: 100%; height: 100%;"></div>
+							<p style="letter-spacing:3px">使用优惠 <span style="color: #757575;font-size: 12px;">温馨提示：亲，若您在使用优惠券、优惠码、代金券、乐豆时遇到问题，可<span><a
+										 href="#" style="color: red;">咨询客服解决</a></span></span><img src="img/shopp1/4.png" style="width: 18px; height: 18px;"></p>
+							<div class="content">
+								<div class="layui-tab">
+									<ul class="layui-tab-title">
+										<li class="layui-this">优惠卷</li>
+										<li>优惠码</li>
+										<li>乐豆</li>
+									</ul>
+									<div class="layui-tab-content">
+										<div class="layui-tab-item layui-show">
+											<li class="name">可用的优惠卷1</li>
+											<li class="name" style="color: #757575;border-bottom: 0;">不可用的优惠卷3</li>
+											<img class="showalls" src="img/shopp1/5.png">
+											<img class="hidealls" src="img/shopp1/22.png">
+											<img class="hidealls tupian1" src="img/shopp1/23.png">
+											<img class="hidealls tupian2" src="img/shopp1/24.png">
+										</div>
+										<div class="layui-tab-item"><input type="text" placeholder="请输入优惠码" />
+											<div class="shiyong">立即使用</div>
+										</div>
+										<div class="layui-tab-item"><input type="text" />
+											<div class="shiyong">立即使用</div>
+										</div>
+										<div class="layui-tab-item">内容4</div>
+										<div class="layui-tab-item">内容5</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="four header">订单备注
+							<div class="zi">客服经理编码:<input class="text" type="text" placeholder="如果您联系过客服，可以填写其编码" /></div>
+							<div class="zi">订单备注:<input type="text" class="text1" placeholder="告诉我您的特殊要求" /></div>
+							<div class="dingdan">
+								<div class="bold">
+									<ul>
+										<li><img src="img/shopp1/6.png" style="width: 16px;height: 16px;margin-right: 20px;">我同意<span><a href="help.html">《联想产品网络销售通用条款和条件》</a></span></li>
+										<li><span class="bold_01">商品金额：</span><span></span></li>
+										<li><span class="bold_01">优惠：</span><span></span></li>
+										<li><span class="bold_01">运费：</span><span></span></li>
+										<li><span class="bold_01">实付款：</span><span style="font-size: 24px; color: red;"></span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer_02 clearfix">
+								<div>
+									<p>收货人:</p><span></span>
+								</div>
+								<div>
+									<p>联系方式:</p><span></span>
+								</div>
+								<div>
+									<p>详细地址:</p><span></span>
+								</div>
+								<div class="rightall"><a href="javascript:void(0)">提交订单</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 尾部 -->
+			<div class="footer"></div>
+		</div>
+	</body>
+</html>

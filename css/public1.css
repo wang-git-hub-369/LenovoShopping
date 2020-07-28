@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.fix {
+	height: 435px;
+	width: 50px;
+	position: fixed;
+	left: 50%;
+	margin-left: 690px;
+	top: 100px;
+	background-color: #fff;
+	z-index: 500;
+	display: none;
+}
+
+.fix ul li:first-child img {
+	height: 67px;
+	width: 50px;
+}
+
+.fix .img {
+	height: 60px;
+	width: 50px;
+}
+
+.fix ul li:nth-child(5) img {
+	height: 77px;
+	width: 50px;
+}
+
+.fix ul li:nth-child(6) img {
+	height: 82px;
+	width: 50px;
+}
+
+.fix ul li:last-child img {
+	height: 25px;
+	width: 50px;
+}

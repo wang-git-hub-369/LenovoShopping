@@ -1,0 +1,85 @@
+@charset "utf-8";
+.floor2{
+	background-color: #F7F7F7;
+	height: 700px;
+}
+.floor2 .container .zhuce{
+	background-color: #FFFFFF;
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.floor2 .container .zhuce .title{
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+	color: #000000;
+	padding-top: 30px;
+}
+.floor2 .container .menu{
+	width: 358px;
+	margin: 0 auto;
+	height: 50px;
+}
+.floor2 .container .menu a{
+	display: inline-block;
+	width: 176px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 20px;
+	background-color: #FFFFFF;
+}
+.floor2 .container .bot{
+	width: 350px;
+	height: 50px;
+	background-color: #FFFFFF;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20px;
+	position: relative;
+	font-size: 14px;
+}
+.floor2 .container .bot>input{
+	width: 340px;
+	height: 50px;
+	padding-left: 5px;
+}
+.floor2 .container .bot #two{
+	width: 250px;
+	height: 50px;
+
+}
+.floor2 .container .bot .btn1{
+	height: 54px;
+	width: 90px;
+	color: #0066EE;
+}
+.floor2 .container .bot:last-child{
+	margin-bottom: 40px;
+}
+.floor2 .container .wenzi{
+	font-size: 15px;
+	text-align: left;
+	letter-spacing:3px;
+}
+.floor2 .container .wenzi>span:nth-child(3){
+	display: inline-block;
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.one{
+	height: 430px;
+}
+.two{
+	display: none;
+}
+.floor2 .container .menu .moren{
+	color: red;
+}
+.btn1,.bot span{
+	cursor: pointer;
+}

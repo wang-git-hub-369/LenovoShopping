@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.floor1 {
+	height: 508px;
+	margin: 0 auto;
+	background: url(../img/personal/person01.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.floor2 {
+	height: 508px;
+	margin: 0 auto;
+	background: url(../img/personal/person06.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.floor3 {
+	height: 508px;
+	margin: 0 auto;
+	background: url(../img/personal/person02.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.floor4 {
+	height: 550px;
+	margin: 0 auto;
+	background: url(../img/personal/person03.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.floor5 {
+	height: 548px;
+	margin: 0 auto;
+	background: url(../img/personal/person04.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.floor6 {
+	height: 700px;
+	margin: 0 auto;
+	background: url(../img/personal/person05.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.floor2:hover,
+.floor3:hover,
+.floor4:hover,
+.floor5:hover,
+.floor6:hover {
+	cursor: pointer;
+}

@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+.floor2 {
+	height: 589px;
+	width: 100%;
+	background: url(../img/picture/1.jpg) no-repeat center center;
+	position: relative;
+}
+
+.floor2 .container .right {
+	background-color: #FFFFFF;
+	position: absolute;
+	right: 200px;
+	top: 30px;
+	bottom: 30px;
+	width: 410px;
+	height: 529px;
+}
+/* 头部样式 */
+.floor2 .container .right .header {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	color: #000000;
+	height: 0px;
+	left: 50px;
+	margin: 33px 36px 36px;
+}
+/* 扫码安全登录样式 */
+.floor2 .container .right .saoma {
+	border: 2px solid #f3d995;
+	height: 30px;
+	background: #fefcee;
+	line-height: 30px;
+	width: 130px;
+	padding: 0 12px;
+	position: absolute;
+	top: 10px;
+	right: 60px;
+}
+.floor2 .container .right .saoma>img{
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.floor2 .container .right .picture {
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+.floor2 .container .right .picture .none_01{
+	/* display: none; */
+}
+.floor2 .container .right .content{
+	margin: 33px 36px 36px;
+}
+.floor2 .container .right .content .one>input{
+	width: 314px;
+	margin-top: 20px;
+	height: 50px;
+	padding: 0 10px;
+}
+.floor2 .container .right .content .two>input{
+	display: block;
+	float: left;
+	margin-top: 2px;
+	width: 22px;
+	height: 16px;
+}
+.floor2 .container .right .content .two{
+	margin-top: 10px;
+	color: #000000;
+	font-size: 15px;
+	cursor: pointer;
+}
+.floor2 .container .right .content .bnt1{
+	width: 340px;
+	height: 50px;
+	font-size: 15px;
+	color: #FFFFFF;
+	background-color: red;
+	border: 0;
+	cursor: pointer;
+	margin-top: 10px;
+}
+.floor2 .container .right .content .three{
+	width: 340px;
+	height: 30px;
+	line-height: 30px;
+}
+.floor2 .container .right .content .three .none{
+	display: none;
+}
+/* 忘记密码的样式 */
+.floor2 .container .right .content .three>span{
+	display: block;
+	float: right;
+	cursor: pointer;
+	font-size: 14px;
+}
+.floor2 .container .right .content .three>span:hover{
+	color: red;
+}
+/* 手机验证样式 */
+.floor2 .container .right .content .three>a{
+	color: red;
+	font-size: 14px;
+}
+.footer{
+	margin: 33px 36px 36px;
+	font-size: 14px;
+}
+.footer>span{
+	height: 1px;
+	background-color: #a4a3a3;
+	float: left;
+	width: 127px;
+	margin-top: 7px;
+}
+.footer>span:last-child{
+	height: 1px;
+	background-color: #a4a3a3;
+	float: right;
+	width: 127px;
+	margin-top: 7px;
+}
+.icon{
+	margin: 33px 36px 36px;
+}
+.floor2 .container .right .icon>ul>li{
+	float: left;
+	width: 31px;
+	height: 31px;
+	padding: 0 25px;
+	cursor: pointer;
+}
+.floor2 .container .right .icon>ul>li:first-child{
+	background: url(../img/picture/qq.png) no-repeat center center;
+}
+.floor2 .container .right .icon>ul>li:first-child:hover{
+	background: url(../img/picture/1.png) no-repeat center center;
+}
+.floor2 .container .right .icon>ul>li:nth-child(2){
+	background: url(../img/picture/weixin.png) no-repeat center center ;
+}
+.floor2 .container .right .icon>ul>li:nth-child(2):hover{
+	background: url(../img/picture/6.png) no-repeat center center ;
+}
+.floor2 .container .right .icon>ul>li:nth-child(3){
+	background: url(../img/picture/weibo.png) no-repeat center center ;
+}
+.floor2 .container .right .icon>ul>li:nth-child(3):hover{
+	background: url(../img/picture/3.png) no-repeat center center ;
+}
+.floor2 .container .right .icon>ul>li:last-child{
+	background: url(../img/picture/zhifubao.png) no-repeat center center ;
+}
+.floor2 .container .right .icon>ul>li:last-child:hover{
+	background: url(../img/picture/7.png) no-repeat center center ;
+}
+.floor2 .container .right .content .content_two{
+	display: none;
+}
+.floor2 .container .right .content .content_two .duanxin{
+	width: 228px;
+	height: 50px;
+}
+.floor2 .container .right .content .content_two .btn2{
+	height: 54px;
+	width: 86px;
+	color: #0066EE;
+}
+.right.hide{
+	display: none;
+}
+.right.hide .tupian{
+	position: absolute;
+	top: 150px;
+	left: 100px;
+}
+.right.hide .tupian>span{
+	display: block;
+	margin-left: 50px;
+	font-size: 14px;
+	color: #000000;
+}
+/* 版权样式 */
+.floor3 .container .wenzi,
+.floor4 .container .wenzi{
+	text-align: center;
+	font-size: 14px;
+	color: #000000;
+	margin-top: 20px;
+}

@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+.floor1 {
+	height: 30px;
+	background-color: #000000;
+	z-index: 1000;
+}
+
+.floor1 .container ul>li {
+	float: right;
+	width: 110px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.floor1 .container ul>li>a:hover {
+	color: red;
+}
+
+.floor1 .container ul>li>dd {
+	font-size: 13px;
+	background-color: #F7F7F7;
+	text-align: center;
+	display: none;
+}
+
+.floor1 .container ul>li>dd>a {
+	color: #000000;
+	width: 100%;
+	height: 100%;
+}
+
+.floor1 .container ul>li>dd>a:hover {
+	color: red;
+}
+
+.floor1 .container ul>li>a {
+	color: white;
+	font-size: 13px;
+}
+
+/* 第二层的样式 */
+.floor2 {
+	margin-top: 60px;
+}
+
+.floor2 .container .left {
+	float: left;
+}
+
+.floor2 .container .right {
+	float: right;
+}
+
+/* 第三层样式 */
+.floor3 {
+	margin-top: 30px;
+}
+
+.tab {
+	width: 100%;
+	border: 1px solid #d9d8d6;
+	border-bottom: 0;
+	margin-bottom: 10px;
+}
+.tab tr {
+	border: 1px solid #ccc;
+}
+.tab .one {
+	height: 40px;
+	border: 1px solid #ccc;
+	line-height: 40px;
+}
+
+.tab .one td {
+	padding: 0 50px;
+	font-size: 14px;
+	color: #000;
+}
+
+.tab .one td:first-child input {
+	position: relative;
+	left: -190px;
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.tab .one td:first-child {
+	padding: 0 230px;
+	font-size: 14px;
+	color: #000;
+}
+
+.tab .two {
+	width: 100%;
+}
+
+.tab .two td:first-child input {
+	display: inline-block;
+	float: left;
+	margin: 50px 40px;
+}
+
+.tab .two td:first-child img {
+	width: 115px;
+	height: 115px;
+	float: left;
+	margin: 0 10px;
+}
+
+.tab .two td:first-child span {
+	display: inline-block;
+	width: 280px;
+	float: left;
+	margin: 30px 10px;
+	font-size: 14px;
+	color: #000;
+	text-align: left;
+}
+
+.tab .two td:nth-child(3) span {
+	font-size: 14px;
+	color: #000;
+}
+
+.tab .two td {
+	text-align: center;
+}
+
+.tab .two td:nth-child(4) button {
+	height: 25px;
+	width: 25px;
+}
+
+.tab .two td:nth-child(4) input {
+	width: 30px;
+	height: 25px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.tab .two td:nth-child(5) {
+	font-size: 14px;
+	color: #000;
+}
+
+.tab .two td:last-child {
+	font-size: 14px;
+	color: #000;
+}
+
+.table tr {
+	border: 1px solid #ccc;
+}
+
+
+.floor3 .tab .two td:nth-child(2) span {
+	font-size: 14px;
+	color: #000;
+}
+
+
+.tab .three  {
+	height: 115px;
+}
+.tab .three .bc_num {
+	float: left;
+	font-size: 13px;
+}
+.tab .three .bc_num input {
+	position: relative;
+	left: 40px;
+	top: -35px;
+}
+.tab .three .bc_num span {
+	display: inline-block;
+	position: relative;
+	left: 40px;
+	top: -36px;
+	color: #000;
+	font-size: 14px;
+}
+.tab .three td:last-child {
+	float: right;
+}
+.tab .three td:last-child ul li {
+	font-size: 14px;
+	color: #000;
+	width: 110px;
+	padding: 10px 40px 10px 0;
+}
+.tab .three td:last-child ul li:last-child span {
+	color: red;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.floor3 .container .shopping .picture {
+	width: 430px;
+	margin-left: 375px;
+	margin-top: 67px;
+	font-size: 18px;
+	line-height: 124px;
+	padding-left: 10px;
+	letter-spacing: 3px;
+	position: relative;
+}
+/* .floor3 .three{
+	display: none;
+}
+.floor3 .jiesuan{
+	display: none;
+} */
+.floor3 .container tr .delte {
+	cursor: pointer;
+	color: #000000;
+}
+
+.floor3 .container .jiesuan>span {
+	text-align: right;
+	display: block;
+	width: 66px;
+	border-radius: 5px;
+	background-color: red;
+	color: white;
+	padding: 10px 53px;
+	float: right;
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+.floor3 .container .shopping .picture>span {
+	display: inline-block;
+	margin-top: 10px;
+	position: relative;
+	top: -38px;
+	left: 20px;
+	color: #000000;
+}
+
+.floor3 .container .shopping .picture>span>button {
+	font-size: 14px;
+}
+
+.floor3 .container .shopping .picture>span>button>a {
+	color: #000000;
+	height: 30px;
+	line-height: 30px;
+	padding: 5px 5px;
+}
+
+/* 第四层 */
+.floor4 .container .header {
+	background-color: #F7F7F7;
+	line-height: 40px;
+	height: 40px;
+	color: #000000;
+	position: relative;
+	border-top: 1px solid #D9D8D6;
+	border-bottom: 1px solid #D9D8D6;
+}
+
+.floor4 .container .header>span {
+	display: inline-block;
+	width: 3px;
+	height: 20px;
+	background-color: red;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.floor4 .border {
+	border: 1px solid #d9d8d6;
+	height: 370px;
+	position: relative;
+}
+
+.floor4 .container .header>h3 {
+	display: inline-block;
+	margin-left: 10px;
+	position: absolute;
+	top: 0px;
+	font-weight: bold;
+}
+
+.floor4 .container .footer {
+	height: 400px;
+}
+
+.floor4 .container .footer .swiper-slide {
+	width: 206px;
+	height: 216px;
+}
+
+.footer .hanzi>span {
+	display: block;
+	width: 230px;
+	bottom: 0px;
+	position: absolute;
+	bottom: -50px;
+	left: 20px;
+	height: 40px;
+	line-height: 25px;
+	font-size: 13px;
+	color: #000000;
+	text-align: left;
+}
+
+.footer .s1 {
+	background: url(../img/shopping/05.jpg) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.footer .s2 {
+	background: url(../img/shopping/01.jpg) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.footer .s3 {
+	background: url(../img/shopping/02.jpg) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.footer .s4 {
+	background: url(../img/shopping/03.jpg) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.footer .s5 {
+	background: url(../img/shopping/04.jpg) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.footer .s6 {
+	background: url(../img/shopping/05.jpg) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.footer .s7 {
+	background: url(../img/shopping/11.jpg) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.floor6 {
+	text-align: center;
+	padding-top: 30px;
+	background-color: #F5F5F5;
+	font-size: 12px;
+}
+
+.floor6 {
+	position: relative;
+}
+
+.floor6 .right {
+	float: right;
+	position: absolute;
+	right: 270px;
+	bottom: -1px;
+	color: #000000;
+	line-height: 20px;
+	padding: 0 9px;
+}
+
+.floor7 {
+	text-align: center;
+	padding-top: 20px;
+	background-color: #F5F5F5;
+	padding-bottom: 30px;
+	font-size: 12px;
+}

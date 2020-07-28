@@ -1,0 +1,242 @@
+@charset "utf-8";
+.floor1{
+	height: 55px;
+	font-size: 0;
+	box-sizing: border-box;
+	font-size: 0;
+	line-height: 70px;
+
+}
+.floor1 a{
+	display: inline-block;
+	text-align: center;
+	margin-left: 80px;
+	height: 55px;
+	
+}
+.floor1 .item{
+	display: inline-block;
+}
+.floor1 .item>img{
+	width: 33px;
+	height: 33px;
+	display: block;
+}
+
+.floor1 .item>img:last-child{
+	display: none;
+}
+.floor1 .txt{
+	display: inline-block;
+	font-size: 14px;
+	color: #272727;
+	position: relative;
+	top:-6px;
+	left: 5px;
+}
+.floor1 a:hover{
+	border-bottom:1px solid #395782 ;
+}
+.floor1 a:hover .imggray{
+	display: none;
+}
+.floor1 a:hover .imgblue{
+	display: block;
+}
+.floor1 a:hover .txt{
+	color: #395782;
+	font-weight: bold;
+}
+.floor2{
+	background-color:#f5f5f5;
+	 height: 50px;
+	 line-height: 50px;
+}
+.floor2 .container>span{
+	color: #272727;
+	float: left;
+}
+.floor2 .container>span:last-child{
+	float: right;
+}
+.floor2 .container>span:last-child>span{
+	color: #E1140A;
+	font-size: 15px;	
+}
+.floor3{
+	height: 300px;
+}
+.floor3 ul{
+	margin-top: 20px;
+	width: 480px;
+}
+.floor3 ul li{
+	float: left;
+	margin-left: 30px;
+}
+.floor3 ul li>input{
+	float: left;
+	display: inline;
+	display: none;
+	position: relative;
+	top: 2px;
+}
+.floor3 ul li a{
+	float: left;
+	display: inline-block;
+	font-size: 13px;
+}
+.floor3 ul li a:hover{
+	color:gray;
+}
+.floor3 .item>span{
+	display: block;
+	width: 60px;
+	font-size: 14px;
+	color: #272727;
+	font-weight: bold;
+	margin-top: 20px;	
+}
+.floor3 .item .yesno_bth{
+	width: 150px;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: none;
+}
+.floor3 .item{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+}
+.floor3 .item .high>ul{
+	margin-top:0;
+}
+.floor3 .item:last-child{
+	border-bottom: none;
+}
+.floor3 .item .yesno_bth button{
+	height: 25px;
+	width: 55px;
+	font-size: 13px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.floor3 .item .yesno_bth button:first-child{
+	background-color: #E1140A;
+	color: white;
+}
+.floor3 .item .duoxuan{
+	margin-top: 20px;
+}
+.floor3 .item .duoxuan a:hover{
+	font-weight: bold;
+	color: #000000;
+}
+.floor3 .item:last-child>.layui-tab>ul>li{
+	border-bottom: 1px solid #ccc;
+}
+.floor3 .item:last-child>ul>li ul{
+	display: none;
+}
+.floor4{
+	background-color: #f5f5f5;
+	padding-bottom: 60px;
+}
+.floor4 .up .top li{
+	display: inline-block;
+	font-size: 14px;
+	color: #272727;
+	text-align: center;
+	cursor: pointer;
+}
+
+.floor4 .up form{
+	margin-top: 20px;
+}
+.floor4 .up form>input{
+	width: 80px;
+	height: 18px;
+	margin-top: 10px;
+}
+.floor4 .up form>.bef{
+	margin-left: 20px;
+}
+.floor4 .up button{
+	width: 50px;
+	height: 23px;
+	background-color: white;
+	border:1px solid lightgray;
+}
+
+.floor4 .up>ul>li{
+	width:100px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	font-size: 14px;
+	color: #272727;
+	text-align: center;
+	margin-left: 10px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background-color: white;
+	cursor: pointer;
+	margin-top: 25px;
+}
+.floor4 .down .item{
+	float: left;
+	width: calc((100% - 45px)/4);
+	margin-right: 15px;
+	background-color: white;
+	box-sizing: border-box;
+	padding: 15px;
+	height: 370px;
+	margin-top: 20px;
+}
+.floor4 .down .item:nth-child(4),
+.floor4 .down .item:nth-child(8),
+.floor4 .down .item:nth-child(12),
+.floor4 .down .item:nth-child(16),
+.floor4 .down .item:nth-child(20),
+.floor4 .down .item:nth-child(24){
+	margin-right: 0;
+}
+.floor4 .down .item img{
+	height: 160px;
+	display: block;
+	margin: 0 auto;
+}
+.floor4 .down .item a{
+	display:inline-block;
+	width: 100%;
+}
+.floor4 .down .item>img{
+	height: 20px;
+	margin-left: 0;
+}
+
+.floor4 .down .name{
+	font-size: 12px;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #ccc;
+}
+.floor4 .down .intro{
+	font-size: 12px;
+	height: 15px;
+	margin-top: 10px;
+}
+.floor4 .down .intro a{
+	color: #ccc;
+}
+.floor4 .down .pric{
+	font-size: 14px;
+	color: #333333;
+	font-weight: bold;
+	margin-top: 45px;
+}
+.floor4 .down>ul>li{
+	margin-top: 20px;
+}
