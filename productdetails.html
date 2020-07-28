@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>商品详情页面</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/productdetails.css" />
+		<link rel="stylesheet" type="text/css" href="lib/swiper/swiper.min.css" />
+		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/swiper/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/productedtails.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="lib/margnifier/common.js" type="text/javascript" charset="utf-8"></script> -->
+		<!-- 弹出框插件 -->
+		<script src="lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/margnifier/common.js"></script>
+		<link href="lib/margnifier/common.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var showproduct = {
+					"boxid": "showbox",
+					"sumid": "showsum",
+					"boxw": 500, //宽度,该版本中请把宽高填写成一样
+					"boxh": 500, //高度,该版本中请把宽高填写成一样
+					"sumw": 80, //列表每个宽度,该版本中请把宽高填写成一样
+					"sumh": 80, //列表每个高度,该版本中请把宽高填写成一样
+					"sumi": 7, //列表间隔
+					"sums": 5, //列表显示个数
+					"sumsel": "sel",
+					"sumborder": 1, //列表边框，没有边框填写0，边框在css中修改
+					"lastid": "showlast",
+					"nextid": "shownext"
+				}; //参数定义	  
+				$.ljsGlasses.pcGlasses(showproduct); //方法调用，务必在加载完后执行
+			});
+			$(function() {
+				//储存数据
+				$(".floor1 .com_main .main_right .button").click(function() {
+					var userAll = localStorage.getItem("user");
+					userAll = JSON.parse(userAll);
+					//var u = userAll.username;
+					if (userAll == undefined) {
+						layer.msg("您还没有登录,请登录！");
+					} else {
+						//判断购物车数是否已经存在
+						var cart = localStorage.getItem("cart");
+						//如果没有 则从新创建一个购物车
+						if (cart == undefined) {
+							cart = {
+								items: [
+									//{001},{002}
+								]
+							};
+						} else {
+							//先解析为一个对象
+							cart = JSON.parse(cart);
+						}
+						//点击添加到购物车，将商品添加购物车
+						var product = {
+							id: "002",
+							name: "鼠标",
+							img: "img/productdetails02/detail01big.jpg",
+							desc: $(".floor1 .com_main .main_right div:eq(0) p").text(),
+							amount: parseFloat($(".floor1 .com_main .main_right .count .addcount input").val()),
+							price: parseFloat($(".floor1 .com_main .main_right .price_area .prices span").text()),
+						};
+						//判断要添加到购物车的商品是否存在
+						var exists = false; //购物车是否已经存在
+						for (var i = 0; i < cart.items.length; i++) {
+							var item = cart.items[i];
+							if (item.id == product.id) {
+								exists = true;
+								item.amount += product.amount;
+								break;
+							}
+						}
+						if (!exists) {
+							//在购物车添加一个新的商品项
+							cart.items.push(product);
+						}
+						console.log(product);
+						//存储到localStorage里面，并且转化为字符串
+						localStorage.setItem("cart", JSON.stringify(cart));
+						window.location.replace("shoppingcart.html");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- fixed→_→绝对定位 -->
+		<div class="fix">
+			<ul>
+				<li>
+					<a href="#">
+						<img class="fix_img" src="img/index/fix01.png" alt="">
+						<img class="fix_img2" src="img/index/fix1.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="fix_img" src="img/index/fix02.png" alt="">
+						<img class="fix_img2" src="img/index/fix2.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="fix_img" src="img/index/fix03.png" alt="">
+						<img class="fix_img2" src="img/index/fix3.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="fix_img" src="img/index/fix04.png" alt="">
+						<img class="fix_img2" src="img/index/fix4.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="fix_img" src="img/index/fix05.png" alt="">
+						<img class="fix_img2" src="img/index/fix5.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="fix_img" src="img/index/fix06.png" alt="">
+						<img class="fix_img2" src="img/index/fix6.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="fix_img" src="img/index/fix07.png" alt="">
+						<img class="fix_img2" src="img/index/fix7.png" alt="">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 头部 -->
+		<div class="header"></div>
+		<!-- 菜单栏 -->
+		<div class="menu"></div>
+		<!-- 主体 -->
+		<div class="body">
+			<div class="floor1">
+				<div class="container">
+					<div class="nav">
+						<a href="javasript:void(0)">首页</a>
+						<p>>商品详情>联想卡龙无线蓝牙双模一键服务鼠标M23</p>
+						<a href="javasript:void(0)" class="contact">联系客服</a>
+						<div class="img">
+							<img src="img/productdetails02/contact01.png">
+							<img src="img/productdetails02/contact02.png" class="img1">
+						</div>
+					</div>
+					<div class="com_main clearfix">
+						<div class="main_left clearfix">
+							<div style="width:500px; margin:0 auto;">
+								<!--页面必要代码,img标签上请务必带上图片真实尺寸px-->
+								<div id="showbox">
+									<img src="img/productdetails02/detail01big.jpg" width="520" height="520" />
+									<img src="img/productdetails02/detail02big.jpg" width="520" height="520" />
+									<img src="img/productdetails02/detail03big.jpg" width="520" height="520" />
+									<img src="img/productdetails02/detail04big.jpg" width="520" height="520" />
+									<img src="img/productdetails02/detail05big.jpg" width="520" height="520" />
+								</div>
+								<!--展示图片盒子-->
+								<div id="showsum"></div>
+								<!--展示图片里边-->
+								<p class="showpage">
+									<a href="javascript:void(0);" id="showlast">
+										< </a> <a href="javascript:void(0);" id="shownext"> >
+									</a>
+								</p>
+							</div>
+							<div class="end_activer clearfix">
+								<div class="end_left">
+									<span>商场编号: </span><span>31089072</span>
+								</div>
+								<div class="end_right">
+									<span>收藏</span>
+									<span>分享</span>
+								</div>
+							</div>
+						</div>
+						<div class="main_right ">
+							<!--  标题 -->
+							<div>
+								<p>联想马卡龙无线蓝牙双模一键服务鼠标M23</p>
+							</div>
+							<div id="maka">
+								<span>
+									蓝牙无线双模连接，5款马卡龙色系替换彩壳可选，磁吸上盖，经久耐用，超300万次点击，人体工学，饱满曲线，舒适质感，一键触发人工服务，【选择赠品】务必要选噢~
+								</span>
+							</div>
+							<!-- 秒杀 -->
+							<div class="seckill">
+								<div class="sec_left">
+									秒杀
+								</div>
+								<div class="sec_right">
+									<span>
+										距结束还剩 :
+									</span>
+									<span id="time">
+										<span>01</span>
+										<b>:</b>
+										<span>02</span>
+										<b>:</b>
+										<span>03</span>
+									</span>
+								</div>
+							</div>
+							<!-- 价格区域 -->
+							<div class="price_area ">
+								<!-- 价格及评价总数 -->
+								<div class="seckill_price clearfix">
+									<div class="sec_price">
+										秒杀价
+									</div>
+									<div class="prices">
+										<b style="float: left;">￥</b><span>89</span>
+									</div>
+									<span><strike>￥179</strike></span>
+								</div>
+								<div class="pingjia">
+									<p>累计评价数</p>
+									<p>798</p>
+								</div>
+								<!-- 活动 -->
+								<div class="price_active">
+									<div class="huodong">
+										活动
+										<div class="gift">
+											赠品
+										</div>
+										<span>选择赠品</span>
+									</div>
+									<div class="zeng">赠</div>
+									<p>彩壳5选1，一定记得要选噢，不支持补发唷~上方选择↑↑↑↑↑↑</p>
+								</div>
+							</div>
+							<!-- 增值业务 -->
+							<div class="appreciate">
+								<span>增值业务</span>
+								<span id="">
+									支持
+								</span>
+								<div class="app_return">
+									<img src="img/productdetails02/contact04.png">
+									以旧换醒
+								</div>
+								<span>高价回收，急速到账换新机</span>
+							</div>
+							<!-- 颜色 -->
+							<div class="color">
+								颜色
+							</div>
+							<!-- 选项 -->
+							<div class="choose">
+								<span class="choose_big">鼠标官方标配白</span>
+								<span class="choose_big">彩壳-元气粉</span>
+								<span class="choose_big">彩壳-活力蓝</span>
+								<span class="choose_big">彩壳-典雅紫</span>
+								<span class="choose_big">彩壳 -柠檬黄</span>
+								<span class="choose_big">彩壳-暗夜绿</span>
+								<span class="choose_big">彩壳-礼盒版</span>
+							</div>
+							<!-- 分期付款 -->
+							<div class="pay">
+								<span>分期付款</span>
+								<ul class="clearfix">
+									<li>
+										<img src="img/productdetails02/contact05.png">
+										<span class="huabei">花呗分期</span>
+										<div class="choose_fenqi">
+											选择分期
+										</div>
+										<div class="slipe"></div>
+										<div class="slipeDown">
+											<div>
+												<input type="checkbox" class="checkbox" value="1" />
+												<div>
+													<span>￥30.35x3期</span>
+													<span>手续费: 约￥0.69/期</span>
+												</div>
+											</div>
+											<div>
+												<input type="checkbox" class="checkbox" value="1" />
+												<div>
+													<span>¥15.50x6期</span>
+													<span>手续费: 约￥0.67/期</span>
+												</div>
+											</div>
+											<div>
+												<input type="checkbox" class="checkbox" value="1" />
+												<div>
+													<span>¥7.97x12期</span>
+													<span>手续费: 约￥0.56/期</span>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<img src="img/productdetails02/contact06.png">
+										<span class="huabei">白条分期</span>
+										<div class="choose_fenqi">
+											选择分期
+										</div>
+										<div class="slipe"></div>
+										<div class="slipeDown slipeDown_two">
+											<div>
+												<input type="checkbox" class="checkbox" value="1" />
+												<div>
+													<span>￥30.35x3期</span>
+													<span>手续费: 约￥0.69/期</span>
+												</div>
+											</div>
+											<div>
+												<input class="input" type="checkbox" class="checkbox" value="1" />
+												<div>
+													<span>¥15.50x6期</span>
+													<span>手续费: 约￥0.67/期</span>
+												</div>
+											</div>
+											<div>
+												<input type="checkbox" class="checkbox" value="1" />
+												<div>
+													<span>¥7.97x12期</span>
+													<span>手续费: 约￥0.56/期</span>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- 购买数量 -->
+							<div class="count">
+								<span style="color: #000000;">购买数量</span>
+								<div class="addcount">
+									<span class="reduce">－</span>
+									<input class="text" type="text" value="1">
+									<span class="add">＋</span>
+								</div>
+							</div>
+							<!-- 立即购买 -->
+							<button type="button" class="button">加入购物车</button>
+							<!-- 下载App -->
+							<div class="app">使用<a href="javasript:void(0)">联想智选APP</a>下单，享受更多优惠
+								<img src="img/productdetails02/contact07.png"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		</div>
+		</div>
+
+		<!-- 第二层 -->
+		<div class="floor2">
+			<div class="container">
+				<div class="title">
+					<b>看了又看</b>
+				</div>
+				<!-- 小轮播图 -->
+				<div class="lunbo">
+					<div class="swiper-container ">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide swper">
+								<a href="javascript:void(0)">
+									<img src="img/productdetails02/swper01.jpg">
+								</a>
+								<p>联想无线静音一键服务鼠标N911 Pro 白色</p>
+								<p>静音按键，经久耐用，超300万次点击，免开关，自动省电休眠，侧裙/底部防滑设计，人体工学，饱满曲线，舒适质感，一键触发人工服务</p>
+								<b>￥ 59</b>
+							</div>
+							<div class="swiper-slide swper">
+								<a href="javascript:void(0)">
+									<img src="img/productdetails02/swper02.jpg">
+								</a>
+								<p>重装系统</p>
+								<p>通过远程的方式重装系统，让电脑重新恢复活力，速度更快；清除电脑存在的潜在威胁，让你的数据更安全（注：此产品不包含正版系统的激活）</p>
+								<b>￥ 108</b>
+							</div>
+							<div class="swiper-slide  swper">
+								<a href="javascript:void(0)"><img src="img/productdetails02/swper03.jpg"></a>
+								<p>联想无线静音一键服务鼠标N911 Pro 黑色</p>
+								<p>静音按键，经久耐用，超300万次点击，免开关，自动省电休眠，侧裙/底部防滑设计，人体工学，饱满曲线，舒适质感，一键触发人工服务</p>
+								<b>￥ 59</b>
+							</div>
+							<div class="swiper-slide  swper">
+								<a href="javascript:void(0)"><img src="img/productdetails02/swper04.jpg"></a>
+								<p>联想小新智能语音鼠标</p>
+								<p>语音打字、语音控制、实时翻译、蓝光技术</p>
+								<b>￥ 269</b>
+							</div>
+							<div class="swiper-slide  swper">
+								<a href="javascript:void(0)"><img src="img/productdetails02/swper05.jpg"></a>
+								<p>联想一键服务无线鼠标M21</p>
+								<p>联想原厂无线鼠标，人体工学，舒适手感，1000DPI光学引擎，一键呼叫工程师服务</p>
+								<b>￥ 79</b>
+							</div>
+							<div class="swiper-slide  swper">
+								<a href="javascript:void(0)"><img src="img/productdetails02/swper04.jpg"></a>
+								<p>联想小新智能语音鼠标</p>
+								<p>语音打字、语音控制、实时翻译、蓝光技术</p>
+								<b>￥ 269</b>
+							</div>
+
+							<div class="swiper-slide  swper">
+								<a href="javascript:void(0)"><img src="img/productdetails02/swper05.jpg"></a>
+								<p>联想一键服务无线鼠标M21</p>
+								<p>联想原厂无线鼠标，人体工学，舒适手感，1000DPI光学引擎，一键呼叫工程师服务</p>
+								<b>￥ 79</b>
+							</div>
+
+						</div>
+						<!-- 如果需要分页器 -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="floor3">
+			<div class="container">
+				<div class="floor3_title  clearfix">
+					<div class="txt_left fl">
+						联想马卡龙无线蓝牙双模一键服务鼠标M23
+					</div>
+					<div class="txt_right fr">
+						<ul class="clearfix">
+							<li>立即购买</li>
+							<li>商品评价(798)</li>
+							<li class="select">商品详情</li>
+						</ul>
+					</div>
+					<div class="xiala">
+						<img src="./img/productdetails02/detail01.jpg">
+						<div class="cont">
+							联想马卡龙无线蓝牙双模一键服务鼠标M23
+						</div>
+						<span>￥</span><span>89</span> <span>x1</span>
+					</div>
+				</div>
+				<div class="content">
+					<div class="show ">
+						<!-- 评论 -->
+						<div class="show_top clearfix">
+							<div class="top_left">
+								好评率 &nbsp;&nbsp;<span>97%</span>
+							</div>
+							<div class="top_right">
+								<span class="right_content">
+									<span class="radio"></span>
+									<span class="radioActive right_content"></span>
+									<span class="assess_title">
+										全评(<span id="assess_number">812</span>&nbsp;&nbsp;)
+									</span>
+								</span>
+								<span>
+									<span class="radio"></span>
+									<span class="radioActive right_content"></span>
+									<span class="assess_title">
+										追评(<span id="assess_number">5</span>)
+									</span>
+								</span>
+								<span>
+									<span class="radio"></span>
+									<span class="radioActive right_content"></span>
+									<span class="assess_title">
+										有图的评价(<span id="assess_number">19</span>)
+									</span>
+								</span>
+								<span>
+									<span class="radio"></span>
+									<span class="radioActive right_content"></span>
+									<span class="assess_title">
+										最新的评价(<span id="assess_number">0</span>)
+									</span>
+								</span>
+								<span>
+
+								</span>
+								<span style="float: right;">
+									<input type="checkbox" name="" id="only_this" value="" />
+									<label for="only_this">只看此商品</label>
+								</span>
+							</div>
+						</div>
+						<div class="top_righ_content">
+							<!-- 全评 -->
+							<div class="box_content right_content">
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											17*****9
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>使用方便，手感舒适，颜色亮丽，反应敏捷。</span>
+										<img src="img/productdetails02/assess_picture01.jpg">
+									</div>
+								</div>
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											匿名
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-04-12 20:20:41
+										</div>
+									</div>
+									<div class="item_right">
+										<span>可惜ipad os 上操作，没有退出键。</span>
+										<img src="img/productdetails02/assess_picture02.jpg">
+									</div>
+								</div>
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											1*****7
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>东西很好看，也非常好用，下次还来。</span>
+										<img src="img/productdetails02/assess_picture03.jpg">
+									</div>
+								</div>
+							</div>
+							<!-- 追评 -->
+							<div class="box_content">
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											匿名
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-02-19 10:42:09
+										</div>
+									</div>
+									<div class="item_right">
+										<span>
+											外观：如图，磁铁吸附盖子和主体。 大小：适合小手； 送了一块电池； 一键服务业蛮灵活； 试用：在A4纸上移动，也反应比较快，但是左右键点击按压有点需要费劲，（相对于办公室自己用的无线鼠标来说），按压声音不算清脆。
+											本来想买罗技的鼠标，想着买了联想电脑就用联想鼠标。</span>
+										<img src="img/productdetails02/assess_picture03.jpg">
+									</div>
+								</div>
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											1*****7
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>1***6
+											2020-03-19 20:02:09
+											发货快，产品好用！👍👍👍
+											【购买2天后追评】
+
+											商品规格型号和参数齐全，客服讲解透彻，建议中肯，真正体现了联想的品牌价值！1***6
+											2020-03-19 20:02:09
+											发货快，产品好用！👍👍👍
+											【购买2天后追评】
+											商品规格型号和参数齐全，客服讲解透彻，建议中肯，真正体现了联想的品牌价值！</span>
+										<!-- <img src="img/productdetails02/assess_picture03.jpg"> -->
+									</div>
+								</div>
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											1*****7
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>东西很好看，也非常好用，下次还来。</span>
+										<img src="img/productdetails02/assess_picture03.jpg">
+									</div>
+								</div>
+							</div>
+							<!--有图的评价-->
+							<div class="box_content">
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											1*****7
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>东西很好看，也非常好用，下次还来。</span>
+										<img src="img/productdetails02/assess_picture03.jpg">
+									</div>
+								</div>
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											1*****7
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>东西很好看，也非常好用，下次还来。</span>
+										<img src="img/productdetails02/assess_picture03.jpg">
+									</div>
+								</div>
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											1*****7
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>东西很好看，也非常好用，下次还来。</span>
+										<img src="img/productdetails02/assess_picture03.jpg">
+									</div>
+								</div>
+							</div>
+							<!-- 最新的评价 -->
+							<div class="box_content">
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											匿名
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 22:14:26
+										</div>
+									</div>
+									<div class="item_right">
+										<span>
+											还不错的鼠标，双模的，还送了一个外壳。</span>
+										<!-- <img src="img/productdetails02/assess_picture03.jpg"> -->
+									</div>
+								</div>
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											1*****7
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>东西很好看，也非常好用，下次还来。</span>
+										<img src="img/productdetails02/assess_picture03.jpg">
+									</div>
+								</div>
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											1*****7
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>东西很好看，也非常好用，下次还来。</span>
+										<img src="img/productdetails02/assess_picture03.jpg">
+									</div>
+								</div>
+							</div>
+							<!-- 只看此商品 -->
+							<div class="box_content ">
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											匿名
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 22:14:26
+										</div>
+									</div>
+									<div class="item_right">
+										<span>
+											还不错的鼠标，双模的，还送了一个外壳。</span>
+										<!-- <img src="img/productdetails02/assess_picture03.jpg"> -->
+									</div>
+								</div>
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											1*****7
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>东西很好看，也非常好用，下次还来。</span>
+										<img src="img/productdetails02/assess_picture03.jpg">
+									</div>
+								</div>
+							</div>
+							<div class="box_content ">
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											匿名
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 22:14:26
+										</div>
+									</div>
+									<div class="item_right">
+										<span>
+											还不错的鼠标，双模的，还送了一个外壳。</span>
+										<!-- <img src="img/productdetails02/assess_picture03.jpg"> -->
+									</div>
+								</div>
+								<div class="item clearfix">
+									<div class="item_left">
+										<div class="name">
+											1*****7
+										</div>
+										<div class="assess_start"></div>
+										<div class="assess_time">
+											2020-05-21 18:02:45
+										</div>
+									</div>
+									<div class="item_right">
+										<span>东西很好看，也非常好用，下次还来。</span>
+										<img src="img/productdetails02/assess_picture03.jpg">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="show select">
+						<img src="img/productdetails02/content01.jpg">
+						<img src="img/productdetails02/content02.jpg">
+						<img src="img/productdetails02/content03.jpg">
+						<img src="img/productdetails02/content04.jpg">
+						<img src="img/productdetails02/content05.jpg">
+						<img src="img/productdetails02/content06.jpg">
+						<img src="img/productdetails02/content07.jpg">
+						<img src="img/productdetails02/content08.jpg">
+						<img src="img/productdetails02/content09.jpg">
+						<img src="img/productdetails02/content10.jpg">
+						<img src="img/productdetails02/content11.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- 尾部 -->
+		<div class="footer"></div>
+	</body>
+</html>

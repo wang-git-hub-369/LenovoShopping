@@ -1,0 +1,178 @@
+/* 产品试用 */
+.floor1 {
+	width: 100%;
+	height: 470px;
+}
+
+.floor1 .container {
+	position: relative;
+}
+
+.floor1 .container .floor1_top {
+	width: 100%;
+	height: 470px;
+}
+
+.floor1 .container .floor1_top ul li {
+	width: 100%;
+	height: 100%;
+}
+
+.floor1 .floor1_rgt {
+	height: 470px;
+	width: 465px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: #FFFFFF;
+	opacity: 0.8;
+}
+
+.floor1 .floor1_rgt_content {
+	width: 465px;
+	height: 470px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	box-sizing: border-box;
+	padding: 0 30px;
+}
+
+.floor1 .floor1_rgt_content .content_active {
+	padding-top: 20px;
+	height: 58px;
+}
+
+.floor1 .floor1_rgt_content .content_active>p {
+	color: red;
+	font-weight: bold;
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.floor1 .floor1_rgt_content .content_return {
+	height: 20px;
+	width: 110px;
+	background-color: #000000;
+	color: white;
+	text-align: center;
+	line-height: 20px;
+}
+
+.floor1 .floor1_rgt_content .content_product>h3 {
+	font-weight: normal;
+	font-size: 35px;
+	height: 52px;
+	line-height: 52px;
+	overflow: hidden;
+	color: #000000;
+}
+
+.floor1 .floor1_rgt_content .content_product>span {
+	margin-top: 10px;
+	color: #000000;
+}
+
+.floor1 .floor1_rgt_content .content_chakan {
+	height: 71px;
+	line-height: 71px;
+	position: relative;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .baogao {
+	margin-top: 10px;
+	width: 220px;
+	height: 45px;
+	border: 1px solid red;
+	background-color: white;
+	text-align: center;
+	line-height: 43px;
+	position: absolute;
+	top: 0px;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .baogao:hover {
+	cursor: pointer;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .baogao>a {
+	font-weight: normal;
+	font-size: 18px;
+	border-radius: 2px;
+	color: red;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .baogao>a:hover {
+	color: red;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .content_share {
+	height: 45px;
+	display: inline-block;
+	width: 50px;
+	position: absolute;
+	left: 240px;
+	top: 10px;
+	overflow: hidden;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .content_share:hover {
+	cursor: pointer;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .content_share>div {
+	height: 45px;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .content_share .img {
+	width: 30px;
+	height: 30px;
+	display: block;
+	margin-left: 10px;
+	margin-top: 8px;
+	z-index: 20;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .content_share img {
+	position: absolute;
+	top: -30px;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .content {
+	display: inline-block;
+	position: absolute;
+	height: 40px;
+	left: 300px;
+	top: 0px;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .content>a {
+	text-decoration: underline;
+}
+
+.floor1 .floor1_rgt_content .content_chakan .content>a:hover {
+	color: #898989;
+}
+
+.floor1 .floor1_rgt_content .active_end {
+	text-align: left;
+	margin-top: 20px;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.floor1 .floor1_rgt_content .end_number p {
+	display: inline-block;
+	margin-right: 20px;
+	color: #000000;
+	font-size: 14px;
+}
+
+.floor1 .floor1_rgt_content .end_number b {
+	font-size: 20px;
+	margin-right: 10px;
+	color: #000000;
+}
+
+

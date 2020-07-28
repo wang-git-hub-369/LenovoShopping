@@ -1,0 +1,57 @@
+@charset "utf-8";
+.header .logo {
+	height: 50px;
+	width: 50px;
+	float: left;
+}
+
+.header .nav {
+	height: 50px;
+	background-color: #fff;
+}
+
+.header .nav .nav-left {
+	height: 50px;
+	width: 600px;
+	float: left;
+	display: inline-block;
+}
+
+.header .nav .nav-left ul {
+	height: 50px;
+	margin-right: 20px;
+}
+
+.header .nav .nav-left ul li {
+	float: left;
+	height: 50px;
+	padding-right: 25px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.header .nav .nav-left ul li a {
+	font-size: 16px;
+	color: #8D8D8D;
+}
+
+.header .nav .nav-right {
+	height: 50px;
+	width: 140px;
+	float: right;
+}
+
+.header .nav .nav-right span {
+	display: inline-block;
+	height: 50px;
+	width: 45px;
+	font-size: 14px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.header .nav .nav-right img {
+	height: 23px;
+	width: 23px;
+	margin-top: 13px;
+}
